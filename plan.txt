@@ -1,0 +1,14 @@
+create functinos for the operations 
+- add, subtract, divide, multiply
+
+create function 'operate'
+- takes two numbers and an operator and call corresponding function
+
+create html for the calculator
+- display
+- numbers
+- operators
+- clear
+- equals
+
+create functions corresponding to each button
