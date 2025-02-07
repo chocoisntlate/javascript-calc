@@ -1,0 +1,57 @@
+body {
+
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    margin-top: 50px;
+    height: 75vh;
+    min-height: 500px;
+}
+
+.calculator {
+    border: 2px solid black;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.display {
+    min-height: 50px;
+    border: 2px solid black;
+    margin: 20px;
+    min-width: 90%;
+    padding: 10px;
+
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 20px;
+}
+.button {
+    padding: 30px;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AC {
+    grid-column: span 2;
+}
+
+.C {
+    grid-column: span 2;
+}
+
+.zero {
+    grid-column: span 2;
+}
