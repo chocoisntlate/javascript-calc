@@ -23,7 +23,9 @@ buttons.addEventListener("click", function(e) {
     }
 
     if (!includesOperator(display.textContent)) {
+        if (e.target.textContent != '=') {
         displayFunction(e);
+        }
         return;
     }
 
@@ -71,7 +73,6 @@ function includesOperator(string) {
 }
 
 function displayFunction(event) {
-    console.log("hey");
 
     display.textContent += event.target.textContent;
 }
