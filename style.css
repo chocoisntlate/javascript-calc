@@ -1,47 +1,55 @@
 body {
-
 }
 
 .main {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 40px;
 
-    padding: 10px;
-    margin-top: 50px;
-    height: 75vh;
-    min-height: 500px;
 }
 
 .calculator {
-    border: 2px solid black;
-    width: 400px;
+    border: 3px solid black;
     display: flex;
+    padding: 5px;
+    border-radius: 3px;
+
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    overflow: hidden;
 }
 
 .display {
-    min-height: 50px;
     border: 2px solid black;
-    margin: 20px;
-    min-width: 90%;
-    padding: 10px;
+    
+    min-width: 85%;
+    height: 40px;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: x-large;
+    align-self: center;
 
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 20px;
+    flex: 1;
+    
 }
 .button {
-    padding: 30px;
-    margin: 8px;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: large;
+    flex: 1;
+    margin: 2px;
+    
 }
 
 .AC {

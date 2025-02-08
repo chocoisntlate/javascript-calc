@@ -3,27 +3,32 @@ display = document.querySelector(".display")
 let showResult = false;
 
 buttons.addEventListener("click", function(e) {
+    const targetElem = e.target;
+
+
+    if (targetElem.classList.contains('buttons')) {
+        return;
+    }
     if (showResult) {
         display.textContent = '';
         showResult = false;
-        
     }
-    if (e.target.classList.contains('num')) {
+    if (targetElem.classList.contains('num')) {
         displayFunction(e);
         return;
     } 
 
-    if (e.target.textContent == "AC") {
+    if (targetElem.textContent == "AC") {
         display.textContent = "";
         return;
     }
-    if (e.target.textContent == "C") {
+    if (targetElem.textContent == "C") {
         display.textContent = display.textContent.slice(0, -1);
         return;
     }
 
     if (!includesOperator(display.textContent)) {
-        if (e.target.textContent != '=') {
+        if (targetElem.textContent != '=') {
         displayFunction(e);
         }
         return;
@@ -39,7 +44,7 @@ buttons.addEventListener("click", function(e) {
     b = Number(b);
 
     let addSign = true;
-    if (e.target.textContent == "=") {
+    if (targetElem.textContent == "=") {
         addSign = false;
         showResult = true;
     }
@@ -61,7 +66,7 @@ buttons.addEventListener("click", function(e) {
             
     }
     if (addSign) {
-        display.textContent += e.target.textContent;
+        display.textContent += targetElem.textContent;
     }
 
 }
